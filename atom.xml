@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kimixuchen&#39;s Blog</title>
+  <subtitle>Practice makes perfect</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-01-14T12:00:22.652Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Kimixuchen</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Install LOIC on Kali Linux</title>
+    <link href="http://yoursite.com/2017/01/14/Linux/"/>
+    <id>http://yoursite.com/2017/01/14/Linux/</id>
+    <published>2017-01-14T11:06:26.000Z</published>
+    <updated>2017-01-14T12:00:22.652Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-Introduction-to-LOIC"><a href="#1-Introduction-to-LOIC" class="headerlink" title="1. Introduction to LOIC"></a>1. Introduction to LOIC</h2><hr>
+<p>LOIC is the abbreviation of ‘Low Orbit lon Cannon’. It is an open source network stress testing and <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack" target="_blank" rel="external">denial-of-service attack</a> application, witten in C#. LOIC was initially developed by Praetox Technologies, but was later released into the public domain, and now is hosted on several open source platforms. We can get source code from <a href="https://github.com/NewEraCracker/LOIC" target="_blank" rel="external">https://github.com/NewEraCracker/LOIC</a></p>
+<h2 id="2-Installation-steps"><a href="#2-Installation-steps" class="headerlink" title="2. Installation steps"></a>2. Installation steps</h2><hr>
+<p>To install LOIC on Kali Linux, we can use environment <a href="https://en.wikipedia.org/wiki/Mono_(software%20" target="_blank" rel="external">Mono</a> or <a href="https://en.wikipedia.org/wiki/Wine_(software%20" target="_blank" rel="external">Wine</a>. In this tutorials we will use Mono.</p>
+<ol>
+<li><strong>apt-get update</strong>    <em>#update Kali</em></li>
+<li><strong>apt-get install mono-runtime</strong>    <em>#install Mono runtime</em></li>
+<li><strong>apt-get install monodevelop</strong></li>
+<li><strong>apt-get install mono-gmcs</strong></li>
+<li><strong>apt-get install update</strong></li>
+<li><strong>cd ~/Desktop</strong></li>
+<li><strong>mkdir loic</strong></li>
+<li><strong>cd loic</strong></li>
+<li><strong>wget <a href="https://raw.githubusercontent.com/nicolargo/loicinstaller/master/loic.sh" target="_blank" rel="external">https://raw.githubusercontent.com/nicolargo/loicinstaller/master/loic.sh</a></strong>    <em>#download loic.sh</em></li>
+<li><strong>chmod a+x loic.sh</strong>    <em>#change authority</em></li>
+<li><strong>./loic.sh install</strong>    <em>#start install process</em></li>
+<li><p><strong><font color="Red">Attention!!!</font></strong> mMybe you will fail and get ‘Project file not found’ in console, but don’t worry. The cause is the command ‘mdtool build’ in loic.sh, because now you are not in project’s dictionary, so the ‘mdtool’ can’t find the project. To copy with it, you only have to do follows:</p>
+<ol>
+<li><strong>cd LOIC/src</strong>    <em>#change to dictionary’src’</em></li>
+<li><strong>mdtool build</strong>    <em>#build</em></li>
+</ol>
+</li>
+<li><p><strong>./loic.sh run</strong>    <em>#start the application</em></p>
+</li>
+</ol>
+<h2 id="3-Screensot-of-LOIC"><a href="#3-Screensot-of-LOIC" class="headerlink" title="3. Screensot of LOIC"></a>3. Screensot of LOIC</h2><hr>
+<p><img src="http://img.blog.csdn.net/20160610195224916" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-Introduction-to-LOIC&quot;&gt;&lt;a href=&quot;#1-Introduction-to-LOIC&quot; class=&quot;headerlink&quot; title=&quot;1. Introduction to LOIC&quot;&gt;&lt;/a&gt;1. Introduction to 
+    
+    </summary>
+    
+    
+      <category term="Software" scheme="http://yoursite.com/tags/Software/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Network Security" scheme="http://yoursite.com/tags/Network-Security/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/01/14/hello-world/"/>
+    <id>http://yoursite.com/2017/01/14/hello-world/</id>
+    <published>2017-01-14T11:03:12.388Z</published>
+    <updated>2017-01-14T11:03:12.388Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+      <category term="-testing -testing anagin" scheme="http://yoursite.com/tags/testing-testing-anagin/"/>
+    
+  </entry>
+  
+</feed>
